@@ -1,7 +1,7 @@
 import ZODB, ZODB.FileStorage
 from BTrees.OOBTree import OOBTree
 
-from ._base import models_registry
+from ._base import models_registry as registry
 
 storage = ZODB.FileStorage.FileStorage('data.fs')
 db = ZODB.DB(storage)
