@@ -1,2 +1,3 @@
+import bottle
 from .base import base_app
-base_app.run(host='localhost', port='8080', debug=True)
+bottle.run(app=base_app, host='localhost', port='8080', debug=True)
