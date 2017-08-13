@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <header class="row">
+        <div class="col-sm-12">
+            <h1>Authors</h1>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Books count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for author in objects %}
+                        <tr>
+                            <td>{{ author.name }}</td>
+                            <td>{{ author.books | count }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

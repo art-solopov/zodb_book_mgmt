@@ -5,7 +5,7 @@ env = Environment(
     autoescape=select_autoescape(['html'])
 )
 
-def render(template, options=None):
+def render(template, **options):
     tmpl = env.get_template(template)
     options = options or {}
     return tmpl.render(**options)

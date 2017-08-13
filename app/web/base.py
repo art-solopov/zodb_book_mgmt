@@ -3,6 +3,8 @@ from bottle import Bottle
 from .templating import render
 from db import db_middleware
 
+from .authors import app as authors_app
+
 base_app = Bottle()
 
 @base_app.route('/')
